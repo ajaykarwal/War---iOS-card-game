@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,38 +18,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-Ld-3Ao" userLabel="BackgroundView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-Ld-3Ao" userLabel="BackgroundView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ik-5d-4Wu" userLabel="FirstCard">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="6ik-5d-4Wu" userLabel="FirstCard">
                                 <rect key="frame" x="0.0" y="215" width="120" height="170"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="1ln-ph-kPM"/>
                                     <constraint firstAttribute="height" constant="170" id="Sw3-wf-r6j"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkU-FY-DFe">
-                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Deal"/>
-                                <connections>
-                                    <action selector="playRoundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="POw-bM-A2i"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KS7-zY-Ai0" userLabel="SecondCard">
-                                <rect key="frame" x="77" y="307" width="120" height="170"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="KS7-zY-Ai0" userLabel="SecondCard">
+                                <rect key="frame" x="136" y="196" width="120" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="ajJ-ZT-xCW"/>
                                     <constraint firstAttribute="width" constant="120" id="cG6-a0-7hA"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkU-FY-DFe">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="DealButton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="620" width="100" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playRoundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="POw-bM-A2i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRD-RF-qBZ">
+                                <rect key="frame" x="20" y="485" width="60" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYc-Ql-9s1">
+                                <rect key="frame" x="38" y="445" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruv-NO-N2q">
+                                <rect key="frame" x="498" y="477" width="60" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enemy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crp-ZZ-tvU">
+                                <rect key="frame" x="511" y="437" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inM-Cm-iTg">
+                                <rect key="frame" x="27" y="54" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBy-Jx-WaA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ruv-NO-N2q" firstAttribute="centerX" secondItem="crp-ZZ-tvU" secondAttribute="centerX" id="5s8-jV-ARa"/>
                             <constraint firstItem="OkU-FY-DFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7SA-OH-4FN"/>
+                            <constraint firstItem="KRD-RF-qBZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Coy-l8-RK6"/>
+                            <constraint firstItem="KRD-RF-qBZ" firstAttribute="top" secondItem="wYc-Ql-9s1" secondAttribute="bottom" constant="20" id="H7Y-Rd-vFV"/>
                             <constraint firstItem="KQk-Ld-3Ao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MF8-Fm-nwl"/>
                             <constraint firstItem="6ik-5d-4Wu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="OIc-BE-plV"/>
                             <constraint firstItem="KQk-Ld-3Ao" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SOB-Xb-Adm"/>
@@ -57,12 +96,17 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OkU-FY-DFe" secondAttribute="bottom" constant="150" id="WWl-mN-RrH"/>
                             <constraint firstItem="KQk-Ld-3Ao" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wpi-XF-mGq"/>
                             <constraint firstAttribute="trailing" secondItem="KQk-Ld-3Ao" secondAttribute="trailing" id="YTU-T6-gZt"/>
+                            <constraint firstAttribute="bottom" secondItem="KRD-RF-qBZ" secondAttribute="bottom" constant="20" id="abP-Nr-AEq"/>
+                            <constraint firstItem="ruv-NO-N2q" firstAttribute="top" secondItem="crp-ZZ-tvU" secondAttribute="bottom" constant="20" id="dBS-ck-gbg"/>
                             <constraint firstAttribute="bottom" secondItem="OkU-FY-DFe" secondAttribute="bottom" constant="60" id="dSc-mt-p6R"/>
                             <constraint firstItem="KQk-Ld-3Ao" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dfJ-5S-dJn"/>
                             <constraint firstItem="OkU-FY-DFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eaU-qV-lXX"/>
                             <constraint firstAttribute="trailing" secondItem="KS7-zY-Ai0" secondAttribute="trailing" constant="50" id="iIB-SB-Dpc"/>
+                            <constraint firstAttribute="bottom" secondItem="ruv-NO-N2q" secondAttribute="bottom" constant="20" id="mnW-lN-qwW"/>
                             <constraint firstAttribute="bottom" secondItem="KQk-Ld-3Ao" secondAttribute="bottom" id="pkI-7y-fME"/>
                             <constraint firstItem="6ik-5d-4Wu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qex-BR-lT6"/>
+                            <constraint firstAttribute="trailing" secondItem="ruv-NO-N2q" secondAttribute="trailing" constant="20" id="qgg-C2-pKs"/>
+                            <constraint firstItem="KRD-RF-qBZ" firstAttribute="centerX" secondItem="wYc-Ql-9s1" secondAttribute="centerX" id="w87-sB-dtw"/>
                             <constraint firstItem="6ik-5d-4Wu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="x0l-wa-6EB"/>
                             <constraint firstAttribute="trailing" secondItem="KS7-zY-Ai0" secondAttribute="trailing" constant="150" id="xgI-bY-uP7"/>
                         </constraints>
@@ -97,13 +141,21 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="KQk-Ld-3Ao" id="bi7-YA-Nu7"/>
+                        <outlet property="enemyScoreLabel" destination="ruv-NO-N2q" id="DzA-on-OtX"/>
                         <outlet property="firstCardImageView" destination="6ik-5d-4Wu" id="hvu-eh-nZG"/>
                         <outlet property="playRoundButton" destination="OkU-FY-DFe" id="C3K-DX-zqR"/>
+                        <outlet property="playerScoreLabel" destination="KRD-RF-qBZ" id="cFU-qk-Lq8"/>
+                        <outlet property="resetButton" destination="inM-Cm-iTg" id="tk3-oh-kzc"/>
                         <outlet property="secondCardImageView" destination="KS7-zY-Ai0" id="AQ2-9M-8pL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="459" y="373"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="667" height="622"/>
+    </resources>
 </document>
